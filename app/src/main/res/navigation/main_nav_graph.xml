@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.dam.t07p03.vista.fragmentos.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" />
+    <fragment
+        android:id="@+id/prefFragment"
+        android:name="com.dam.t07p03.vista.fragmentos.PrefFragment"
+        android:label="PrefFragment" />
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.dam.t07p03.vista.fragmentos.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main">
+        <action
+            android:id="@+id/action_mainFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_prefFragment"
+            app:destination="@id/prefFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/dlgConfirmacionMain"
+        android:name="com.dam.t07p03.vista.dialogos.DlgConfirmacion"
+        android:label="DlgConfirmacion" />
+    <action
+        android:id="@+id/action_global_dlgConfirmacionMain"
+        app:destination="@id/dlgConfirmacionMain" />
+
+</navigation>

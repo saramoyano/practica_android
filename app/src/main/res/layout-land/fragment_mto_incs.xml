@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".vista.fragmentos.MtoIncsFragment">
+
+    <TextView
+        android:id="@+id/tvIncCabecera"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center_horizontal"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvIncDpto"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/tv_Inc_Dpto"
+        app:layout_constraintEnd_toStartOf="@+id/glineMtoIncs1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvIncCabecera" />
+
+    <EditText
+        android:id="@+id/etIncDptoId"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:inputType="text|textNoSuggestions"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvIncDpto"
+        app:layout_constraintEnd_toEndOf="@id/glineMtoIncs4"
+        app:layout_constraintStart_toStartOf="@+id/glineMtoIncs1" />
+
+    <EditText
+        android:id="@+id/etIncDptoNombre"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="32dp"
+        android:ems="10"
+        android:inputType="text|textNoSuggestions"
+        android:textSize="14sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/etIncDptoId"
+        app:layout_constraintEnd_toEndOf="@id/glineMtoIncs2"
+        app:layout_constraintStart_toStartOf="@id/glineMtoIncs4" />
+
+    <TextView
+        android:id="@+id/tvIncId"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/tv_Inc_Id"
+        app:layout_constraintBaseline_toBaselineOf="@id/etIncDptoNombre"
+        app:layout_constraintEnd_toStartOf="@+id/glineMtoIncs3"
+        app:layout_constraintStart_toStartOf="@+id/glineMtoIncs2" />
+
+    <EditText
+        android:id="@+id/etIncId"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="32dp"
+        android:ems="10"
+        android:inputType="textNoSuggestions|number"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvIncId"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/glineMtoIncs3" />
+
+    <TextView
+        android:id="@+id/tvIncFecha"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/tv_Inc_Fecha"
+        app:layout_constraintEnd_toStartOf="@+id/glineMtoIncs1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvIncDpto" />
+
+    <EditText
+        android:id="@+id/etIncFecha"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="32dp"
+        android:ems="10"
+        android:inputType="text|textNoSuggestions"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvIncFecha"
+        app:layout_constraintEnd_toEndOf="@id/glineMtoIncs2"
+        app:layout_constraintStart_toStartOf="@+id/glineMtoIncs1" />
+
+    <TextView
+        android:id="@+id/tvIncTipo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/tv_Inc_Tipo"
+        app:layout_constraintBaseline_toBaselineOf="@+id/etIncFecha"
+        app:layout_constraintEnd_toStartOf="@+id/glineMtoIncs3"
+        app:layout_constraintStart_toStartOf="@+id/glineMtoIncs2" />
+
+    <RadioGroup
+        android:id="@+id/rgIncTipo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="32dp"
+        android:checkedButton="@+id/rbIncTipoRMI"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/glineMtoIncs3"
+        app:layout_constraintTop_toTopOf="@+id/tvIncTipo">
+
+        <RadioButton
+            android:id="@+id/rbIncTipoRMI"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/rb_Inc_TipoRMI"
+            tools:layout_editor_absoluteX="199dp"
+            tools:layout_editor_absoluteY="345dp" />
+
+        <RadioButton
+            android:id="@+id/rbIncTipoRMA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/rb_Inc_TipoRMA"
+            tools:layout_editor_absoluteX="142dp"
+            tools:layout_editor_absoluteY="385dp" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tvIncDescripcion"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/tv_Inc_Descripcion"
+        app:layout_constraintEnd_toStartOf="@+id/glineMtoIncs1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvIncFecha" />
+
+    <EditText
+        android:id="@+id/etIncDescripcion"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="32dp"
+        android:ems="10"
+        android:inputType="textMultiLine|textNoSuggestions"
+        android:lines="2"
+        android:maxLines="2"
+        android:textSize="14sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvIncDescripcion"
+        app:layout_constraintEnd_toEndOf="@id/glineMtoIncs2"
+        app:layout_constraintStart_toStartOf="@+id/glineMtoIncs1" />
+
+    <TextView
+        android:id="@+id/tvIncResolucion"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/tv_Inc_Resolucion"
+        app:layout_constraintBaseline_toBaselineOf="@+id/etIncDescripcion"
+        app:layout_constraintEnd_toStartOf="@+id/glineMtoIncs3"
+        app:layout_constraintStart_toStartOf="@+id/glineMtoIncs2" />
+
+    <EditText
+        android:id="@+id/etIncResolucion"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="32dp"
+        android:ems="10"
+        android:inputType="textMultiLine|textNoSuggestions"
+        android:lines="2"
+        android:maxLines="2"
+        android:textSize="14sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvIncResolucion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/glineMtoIncs3" />
+
+    <TextView
+        android:id="@+id/tvIncEstado"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/tv_Inc_Estado"
+        app:layout_constraintEnd_toStartOf="@+id/glineMtoIncs1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvIncDescripcion" />
+
+    <CheckBox
+        android:id="@+id/cbIncEstado"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvIncEstado"
+        app:layout_constraintEnd_toStartOf="@+id/glineMtoIncs2"
+        app:layout_constraintStart_toStartOf="@+id/glineMtoIncs1" />
+
+    <Button
+        android:id="@+id/btCancelar"
+        style="@style/StyleButtons"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/bt_Cancelar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btAceptar"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btAceptar"
+        style="@style/StyleButtons"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/bt_Aceptar"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btCancelar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btCancelar" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glineMtoIncs1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.2" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glineMtoIncs2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glineMtoIncs3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.7" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glineMtoIncs4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.3" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

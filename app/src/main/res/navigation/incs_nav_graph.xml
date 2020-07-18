@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/incs_nav_graph"
+    app:startDestination="@id/busIncsFragment">
+
+    <dialog
+        android:id="@+id/dlgConfirmacion"
+        android:name="com.dam.t07p03.vista.dialogos.DlgConfirmacion"
+        android:label="DlgConfirmacion" />
+    <action android:id="@+id/action_global_dlgConfirmacion"
+        app:destination="@id/dlgConfirmacion" />
+    <fragment
+        android:id="@+id/busIncsFragment"
+        android:name="com.dam.t07p03.vista.fragmentos.BusIncsFragment"
+        android:label="fragment_bus_incs"
+        tools:layout="@layout/fragment_bus_incs" >
+        <action
+            android:id="@+id/action_busIncsFragment_to_mtoIncsFragment"
+            app:destination="@id/mtoIncsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mtoIncsFragment"
+        android:name="com.dam.t07p03.vista.fragmentos.MtoIncsFragment"
+        android:label="fragment_mto_incs"
+        tools:layout="@layout/fragment_mto_incs" />
+</navigation>

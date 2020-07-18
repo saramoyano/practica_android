@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:scrollbars="vertical">
+
+    <PreferenceCategory app:title="@string/category_Almacenamiento">
+        <EditTextPreference
+            app:defaultValue="@string/SQLite_name_default"
+            app:isPreferenceVisible="true"
+            app:key="@string/SQLite_name_key"
+            app:summary="@string/SQLite_name_summary"
+            app:title="@string/SQLite_name_title" />
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="@string/category_Interfaz">
+        <SwitchPreferenceCompat
+            app:defaultValue="@string/login_default"
+            app:key="@string/login_key"
+            app:summary="@string/login_summary"
+            app:title="@string/login_title" />
+        <SwitchPreferenceCompat
+            app:defaultValue="@string/splashApp_default"
+            app:key="@string/splashApp_key"
+            app:summary="@string/splashApp_summary"
+            app:title="@string/splashApp_title" />
+        <SwitchPreferenceCompat
+            app:defaultValue="@string/bNav_default"
+            app:key="@string/bNav_key"
+            app:summary="@string/bNav_summary"
+            app:title="@string/bNav_title" />
+    </PreferenceCategory>
+
+</androidx.preference.PreferenceScreen>

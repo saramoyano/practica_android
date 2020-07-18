@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.dam.t07p03">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_logo_chirinos"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="com.dam.t07p03.vista.MainActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:theme="@style/SplashTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.dam.t07p03.vista.DptosActivity"
+            android:label="@string/title_activity_dptos"
+            android:parentActivityName="com.dam.t07p03.vista.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan|stateHidden">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.dam.t07p03.vista.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.dam.t07p03.vista.IncsActivity"
+            android:label="@string/title_activity_incs"
+            android:parentActivityName="com.dam.t07p03.vista.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan|stateHidden">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.dam.t07p03.vista.MainActivity" />
+        </activity>
+    </application>
+
+</manifest>

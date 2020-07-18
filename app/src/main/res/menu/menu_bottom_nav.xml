@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menuDptos"
+        android:icon="@android:drawable/ic_menu_agenda"
+        android:orderInCategory="10"
+        android:title="@string/menu_Dptos" />
+    <item
+        android:id="@+id/menuIncs"
+        android:title="@string/menu_Incs" />
+
+</menu>
